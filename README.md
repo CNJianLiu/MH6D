@@ -1,10 +1,9 @@
 # MH6D: Multi-Hypothesis Consistency Learning for Category-Level 6D Object Pose Estimation
-This is the repository of MH6D. More details will be released after the paper is accepted.
 
-This is the PyTorch implementation of paper **[MH6D](https://ieeexplore.ieee.org/document/10043016)** published in <b>*IEEE TNNLS*</b> by <a href="https://cnjliu.github.io/">J. Liu</a>, W. Sun, C. Liu, H. Yang, X. Zhang, and <a href="https://ajmalsaeed.net/">A. Mian</a>.
+This is the PyTorch implementation of paper **[MH6D](10.1109/TNNLS.2024.3360712)** published in <b>*IEEE TNNLS*</b> by <a href="https://cnjliu.github.io/">J. Liu</a>, W. Sun, C. Liu, H. Yang, X. Zhang, and <a href="https://ajmalsaeed.net/">A. Mian</a>.
 
 <p align="center">
-<img src="images/Fig0.JPG" alt="intro" width="100%"/>
+<img src="image/Fig0.jpg" alt="intro" width="100%"/>
 </p>
 
 ## Installation
@@ -30,7 +29,7 @@ python setup.py install
 Download [camera_train](http://download.cs.stanford.edu/orion/nocs/camera_train.zip), [camera_val](http://download.cs.stanford.edu/orion/nocs/camera_val25K.zip),
 [real_train](http://download.cs.stanford.edu/orion/nocs/real_train.zip), [real_test](http://download.cs.stanford.edu/orion/nocs/real_test.zip),
 [ground-truth annotations](http://download.cs.stanford.edu/orion/nocs/gts.zip),
-[mesh models](http://download.cs.stanford.edu/orion/nocs/obj_models.zip), and segmentation results ([Link](https://drive.google.com/file/d/1hNmNRr7YRCgg-c_qdvaIzKEd2g4Kac3w/view?usp=sharing)).
+[mesh models](http://download.cs.stanford.edu/orion/nocs/obj_models.zip), and [segmentation results](https://drive.google.com/file/d/1hNmNRr7YRCgg-c_qdvaIzKEd2g4Kac3w/view?usp=sharing).
 Unzip and organize these files in ../data as follows:
 ```
 data
@@ -63,17 +62,17 @@ python data_processing.py
 ```
 
 ## Evaluation
-You can download our pretrained models ([model.pth](https://drive.google.com/file/d/1bkrA71f2d0xnrIMQefEEkjNL4_e5pi_I/view?usp=share_link) and put it in the '../log1/3MH_sys' directory. Then, you can have a quick evaluation using the following command.
+You can download our pretrained model [epoch_30.pth](https://drive.google.com/file/d/1GADDsyOaz8wV2CDe-tykNWTR1-oAWrtq/view?usp=sharing) and put it in the '../log1/3MH_sys' directory. Then, you can have a quick evaluation using the following command.
 ```
 python test.py --config config1/3MH_sys.yaml
 ```
 
 ## Train
-In order to train the model, remember to download the complete dataset, and organize and preprocess the dataset properly at first.
+To train the model, remember to download the complete dataset, and organize and preprocess the dataset properly.
 
-train.py is the main file for training. You can start training using the following command.
+train_sys.py is the main file for training. You can start training using the following command.
 ```
-python train.py --gpus 0 --config config1/3MH_sys.yaml
+python train_sys.py --gpus 0 --config config1/3MH_sys.yaml
 ```
 ## Citation
 If you find the code useful, please cite our paper.
