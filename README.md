@@ -66,6 +66,7 @@ You can download our pretrained model [epoch_30.pth](https://drive.google.com/fi
 ```
 python test.py --config config1/3MH_sys.yaml
 ```
+Note that there is a small mistake in the original evaluation code of [NOCS](https://github.com/hughw19/NOCS_CVPR2019/blob/dd58dbf68feede04c3d7bbafeb9212af1a43422f/utils.py#L252) for the 3D IOU metrics. We thank [CATRE](https://github.com/THU-DA-6D-Pose-Group/CATRE) and [SSC-6D](https://github.com/swords123/SSC-6D) for pointing out this. We have revised it and recalculated the metrics of some methods. The revised evaluation code is given in our released [code](https://github.com/CNJianLiu/MH6D/blob/ef9703855a1d87105c6638dde1f9712dbff9b0a7/utils/evaluation_utils.py#L517).
 
 ## Train
 To train the model, remember to download the complete dataset, and organize and preprocess the dataset properly.
