@@ -1,6 +1,6 @@
 # MH6D: Multi-Hypothesis Consistency Learning for Category-Level 6D Object Pose Estimation
 
-This is the PyTorch implementation of paper **[MH6D](10.1109/TNNLS.2024.3360712)** published in <b>*IEEE TNNLS*</b> by <a href="https://cnjliu.github.io/">J. Liu</a>, W. Sun, C. Liu, H. Yang, X. Zhang, and <a href="https://ajmalsaeed.net/">A. Mian</a>.
+This is the PyTorch implementation of paper **[MH6D](https://ieeexplore.ieee.org/document/10433529)** published in <b>*IEEE TNNLS*</b> by <a href="https://cnjliu.github.io/">J. Liu</a>, W. Sun, C. Liu, H. Yang, X. Zhang, and <a href="https://ajmalsaeed.net/">A. Mian</a>.
 
 <p align="center">
 <img src="image/Fig0.jpg" alt="intro" width="100%"/>
