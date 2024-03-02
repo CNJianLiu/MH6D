@@ -35,7 +35,7 @@ class Solver(gorilla.solver.BaseSolver):
 
         self.optimizer = optim.Adam(self.model.parameters(), lr=cfg.optimizer.lr, weight_decay=cfg.optimizer.weight_decay)
         self.lr_scheduler = CyclicLR(self.optimizer, base_lr=1e-5, max_lr=1e-3,
-                                     step_size= cfg.max_epoch * cfg.num_mini_batch_per_epoch // 8, mode='triangular')
+                                     step_size= cfg.max_epoch * cfg.num_mini_batch_per_epoch // 6, mode='triangular')
 
         bnm_lmbd = lambda it: max(cfg.bn.bn_momentum*cfg.bn.bn_decay**(int(it / cfg.bn.decay_step)), cfg.bn.bnm_clip)
         self.bnm_scheduler = BNMomentumScheduler(self.model, bn_lambda=bnm_lmbd, last_epoch=self.iter)
