@@ -78,7 +78,7 @@ python train_sys.py --gpus 0 --config config1/3MH_sys.yaml
 ## Citation
 If you find the code useful, please cite our paper.
 ```latex
-@article{TII2023,
+@article{MH6D,
   author={Liu, Jian and Sun, Wei and Liu, Chongpei and Yang Hui and Zhang, Xing and Mian, Ajmal},
   journal={IEEE Transactions on Neural Networks and Learning Systems},
   title={MH6D: Multi-Hypothesis Consistency Learning for Category-Level 6D Object Pose Estimation},
